@@ -2,7 +2,7 @@ name: Log Time Job
 
 on:
   schedule:
-    - cron: "* * * * *" # Runs every minute
+    - cron: '* * * * *' # Runs every minute
   workflow_dispatch: # Manually run the workflow
   
 jobs:
