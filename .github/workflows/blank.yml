@@ -1,7 +1,7 @@
 name: Log Time Job
 on:
   schedule:
-  - cron: "*/1 * * * *" # Runs every 5 minutes
+    - cron: "* * * * *" # Runs every minute
 jobs:
   log_time:
     runs-on: ubuntu-latest
