@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: '* * * * *' # Runs every minute
   workflow_dispatch: # Manually run the workflow
+  push:
+    branches:
+      - 'master'
+      - 'main'
   
 jobs:
   log_time:
