@@ -1,1 +1,1 @@
-echo Current Date and Time: $(date) >> log.txt
+echo "Current Date and Time: $(date)" | tee -a log.txt
