@@ -2,7 +2,7 @@ name: Log Time Job
 
 on:
   schedule:
-    - cron: '* * * * *' # Runs every minute
+    - cron: '*/30 * * * *' # Runs every 30 minutes now
   workflow_dispatch: # Manually run the workflow
   
 jobs:
@@ -15,6 +15,7 @@ jobs:
         
     - name: Run logging script
       run: chmod +x log_time.sh; ./log_time.sh
+      run: chmod +x loghowmanytimes.sh; ./loghowmanytimes.sh
         
     - name: Commit and push changes
       run: git config --global user.name "github-actions"; git config --global user.email "github-actions@github.com"; git add log.txt; git commit -m "Update log file with new timestamp" || echo "No changes to commit"; git push
